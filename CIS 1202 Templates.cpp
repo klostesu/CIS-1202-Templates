@@ -13,17 +13,19 @@ int half(int number);
 
 int main()
 {
+    // set values for variables
     double a = 9.0;
     float b = 5.0f;
     int c = -8;
 
+    // half will call variable and use appropriate function depending on variable type
     cout << half(a) << endl;
     cout << half(b) << endl;
     cout << half(c) << endl;
 
     return 0;
 }
-// create separate function for int values 
+// create separate function for double, float values 
 template <typename T>
 T half(T number) {
     return number / 2;
