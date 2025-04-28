@@ -5,14 +5,11 @@
 #include <iomanip>
 using namespace std;
 
+// Function Prototypes 
 template <typename T>
-T half(T number) {
-    return number / 2;
-}
+T half(T number);
 
-int half(int number) {
-    return static_cast<int>(static_cast<float>(number) / 2 + 0.5);
-}
+int half(int number);
 
 int main()
 {
@@ -26,6 +23,14 @@ int main()
 
     return 0;
 }
+// create separate function for int values 
+template <typename T>
+T half(T number) {
+    return number / 2;
+}
 
-
+// create separate function for int values 
+int half(int number) {
+    return static_cast<int>(static_cast<float>(number) / 2 + 0.5);
+}
 
